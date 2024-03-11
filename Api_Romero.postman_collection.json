@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "2848f5da-140c-4ee5-9609-4a4fe7cb4f83",
+		"name": "Api_Romero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30647545"
+	},
+	"item": [
+		{
+			"name": "GET Peticiones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET MisPeticiones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/mispeticiones",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"mispeticiones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Peticiones/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT FirmarPeticion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones/firmar/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones",
+						"firmar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Peticiones/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"titulo\": \"Prueba1 MODIFICADO\",\r\n        \"descripcion\": \"Prueba1\",\r\n        \"destinatario\": \"todos\",\r\n        \"firmantes\": 0,\r\n        \"estado\": \"pendiente\",\r\n        \"user_id\": 1,\r\n        \"categoria_id\": 1,\r\n        \"created_at\": null,\r\n        \"updated_at\": null\r\n    }"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Estado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"titulo\": \"Prueba1 MODIFICADO\",\r\n        \"descripcion\": \"Prueba1\",\r\n        \"destinatario\": \"todos\",\r\n        \"firmantes\": 0,\r\n        \"estado\": \"pendiente\",\r\n        \"user_id\": 1,\r\n        \"categoria_id\": 1,\r\n        \"created_at\": null,\r\n        \"updated_at\": null\r\n    }"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones/estado/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones",
+						"estado",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Peticiones",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA4ODg0NzMyLCJleHAiOjE3MDg4ODgzMzIsIm5iZiI6MTcwODg4NDczMiwianRpIjoieVBUU1Z2UEtFSHExWVVUZCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fba1iPlYiAEJcd_mf0fg2_9muxiDWf61Pi9bFiJg5kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones?titulo=PeticionES sin loguearse Prueba&descripcion=Prueba 6&destinatario=todos&firmantes=1&estado=pendiente&user_id=2&categoria_id=2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "PeticionES sin loguearse Prueba"
+						},
+						{
+							"key": "descripcion",
+							"value": "Prueba 6"
+						},
+						{
+							"key": "destinatario",
+							"value": "todos"
+						},
+						{
+							"key": "firmantes",
+							"value": "1"
+						},
+						{
+							"key": "estado",
+							"value": "pendiente"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "categoria_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL Peticiones/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones/5",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/register?name=marcos&email=marcos@gmail.com&password=12345678",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "marcos"
+						},
+						{
+							"key": "email",
+							"value": "marcos@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/login?email=marcos@gmail.com&password=12345678",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "marcos@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA4OTQzMDEwLCJleHAiOjE3MDg5NDY2MTAsIm5iZiI6MTcwODk0MzAxMCwianRpIjoiUUR0c01oWkVqcmVjV0Z5ciIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nWsc9IePjPgTyzTf51Y8DGHmaMFMYHIKZA1zDo-L-vw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/me",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzA4OTQzMDEwLCJleHAiOjE3MDg5NDY2MTAsIm5iZiI6MTcwODk0MzAxMCwianRpIjoiUUR0c01oWkVqcmVjV0Z5ciIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nWsc9IePjPgTyzTf51Y8DGHmaMFMYHIKZA1zDo-L-vw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/logout",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST AddPeticion+Login:",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/peticiones?titulo=Peticion sin loguearse Pruebas&descripcion=Prueba 6&destinatario=todos&firmantes=1&estado=pendiente&user_id=2&categoria_id=2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peticiones"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "Peticion sin loguearse Pruebas"
+						},
+						{
+							"key": "descripcion",
+							"value": "Prueba 6"
+						},
+						{
+							"key": "destinatario",
+							"value": "todos"
+						},
+						{
+							"key": "firmantes",
+							"value": "1"
+						},
+						{
+							"key": "estado",
+							"value": "pendiente"
+						},
+						{
+							"key": "user_id",
+							"value": "2"
+						},
+						{
+							"key": "categoria_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
